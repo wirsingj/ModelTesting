@@ -7,26 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F29BC8C1ACE09FC00D7F737 /* girl1_Model.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BC8B1ACE09FC00D7F737 /* girl1_Model.dae */; };
+		1F29BC8E1ACE0A0400D7F737 /* boy1_Model.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BC8D1ACE0A0400D7F737 /* boy1_Model.dae */; };
+		1F29BC901ACE0A0B00D7F737 /* CGirl0001.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BC8F1ACE0A0B00D7F737 /* CGirl0001.tif */; };
+		1F29BC921ACE0A1300D7F737 /* boy1_Animations.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BC911ACE0A1300D7F737 /* boy1_Animations.dae */; };
+		1F29BC941ACE0A1D00D7F737 /* girl1_Animations.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F29BC931ACE0A1D00D7F737 /* girl1_Animations.dae */; };
 		1F4EA5731AC1FE890030008A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4EA5721AC1FE890030008A /* AppDelegate.swift */; };
 		1F4EA5751AC1FE890030008A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4EA5741AC1FE890030008A /* art.scnassets */; };
 		1F4EA5771AC1FE890030008A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4EA5761AC1FE890030008A /* GameViewController.swift */; };
 		1F4EA57A1AC1FE890030008A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4EA5781AC1FE890030008A /* Main.storyboard */; };
 		1F4EA57C1AC1FE890030008A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4EA57B1AC1FE890030008A /* Images.xcassets */; };
 		1F4EA58B1AC1FE8A0030008A /* ModelTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4EA58A1AC1FE8A0030008A /* ModelTestingTests.swift */; };
-		1F4EA5971AC200730030008A /* boy1_Character.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F4EA5951AC200730030008A /* boy1_Character.dae */; };
-		1F4EA5981AC200730030008A /* boy1_Talk.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F4EA5961AC200730030008A /* boy1_Talk.dae */; };
 		1F4EA59A1AC200A00030008A /* CBoy0001.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1F4EA5991AC200A00030008A /* CBoy0001.tif */; };
-		1F9165F01AC2289D00F51612 /* boy1_Model.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F9165EF1AC2289D00F51612 /* boy1_Model.dae */; };
-		1F91660A1AC23DF700F51612 /* boy1_Sit.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F9166091AC23DF700F51612 /* boy1_Sit.dae */; };
-		1F91660C1AC23EBA00F51612 /* boy1_Eat.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F91660B1AC23EBA00F51612 /* boy1_Eat.dae */; };
-		1F9166121AC24DBB00F51612 /* boy1_Animations.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F9166111AC24DBB00F51612 /* boy1_Animations.dae */; };
-		1F9166161AC2549B00F51612 /* boy1_idleLoop.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F9166151AC2549B00F51612 /* boy1_idleLoop.dae */; };
-		1F9166181AC255A000F51612 /* boy1_Run.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F9166171AC255A000F51612 /* boy1_Run.dae */; };
-		1F91661A1AC2575400F51612 /* boy1_idle1.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F9166191AC2575400F51612 /* boy1_idle1.dae */; };
-		1F91664C1AC28B7800F51612 /* boy1_idle2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F91664B1AC28B7800F51612 /* boy1_idle2.dae */; };
-		1F91664E1AC2977A00F51612 /* girl1_Model.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F91664D1AC2977A00F51612 /* girl1_Model.dae */; };
-		1F9166521AC299D600F51612 /* CGirl0001.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1F9166511AC299D600F51612 /* CGirl0001.tif */; };
-		1F9166541AC29BF800F51612 /* girl1_Animations.dae in Resources */ = {isa = PBXBuildFile; fileRef = 1F9166531AC29BF800F51612 /* girl1_Animations.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F29BC8B1ACE09FC00D7F737 /* girl1_Model.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = girl1_Model.dae; sourceTree = "<group>"; };
+		1F29BC8D1ACE0A0400D7F737 /* boy1_Model.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy1_Model.dae; sourceTree = "<group>"; };
+		1F29BC8F1ACE0A0B00D7F737 /* CGirl0001.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = CGirl0001.tif; sourceTree = "<group>"; };
+		1F29BC911ACE0A1300D7F737 /* boy1_Animations.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = boy1_Animations.dae; path = ../../../../../Dropbox/AViSSS_Animations/boy1/boy1_Animations.dae; sourceTree = "<group>"; };
+		1F29BC931ACE0A1D00D7F737 /* girl1_Animations.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = girl1_Animations.dae; path = ../../../../../Dropbox/AViSSS_Animations/girl1/girl1_Animations.dae; sourceTree = "<group>"; };
 		1F4EA56D1AC1FE890030008A /* ModelTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModelTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4EA5711AC1FE890030008A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4EA5721AC1FE890030008A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,20 +47,7 @@
 		1F4EA5841AC1FE890030008A /* ModelTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4EA5891AC1FE8A0030008A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4EA58A1AC1FE8A0030008A /* ModelTestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTestingTests.swift; sourceTree = "<group>"; };
-		1F4EA5951AC200730030008A /* boy1_Character.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy1_Character.dae; sourceTree = "<group>"; };
-		1F4EA5961AC200730030008A /* boy1_Talk.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy1_Talk.dae; sourceTree = "<group>"; };
 		1F4EA5991AC200A00030008A /* CBoy0001.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = CBoy0001.tif; path = ../CBoy0001.tif; sourceTree = "<group>"; };
-		1F9165EF1AC2289D00F51612 /* boy1_Model.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy1_Model.dae; sourceTree = "<group>"; };
-		1F9166091AC23DF700F51612 /* boy1_Sit.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy1_Sit.dae; sourceTree = "<group>"; };
-		1F91660B1AC23EBA00F51612 /* boy1_Eat.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = boy1_Eat.dae; sourceTree = "<group>"; };
-		1F9166111AC24DBB00F51612 /* boy1_Animations.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = boy1_Animations.dae; path = ../../../../Dropbox/AViSSS_Animations/boy1/boy1_Animations.dae; sourceTree = "<group>"; };
-		1F9166151AC2549B00F51612 /* boy1_idleLoop.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = boy1_idleLoop.dae; path = ../../../../Dropbox/AViSSS_Animations/boy1/boy1_idleLoop.dae; sourceTree = "<group>"; };
-		1F9166171AC255A000F51612 /* boy1_Run.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = boy1_Run.dae; path = ../../../../Dropbox/AViSSS_Animations/boy1/boy1_Run.dae; sourceTree = "<group>"; };
-		1F9166191AC2575400F51612 /* boy1_idle1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = boy1_idle1.dae; path = ../../../../Dropbox/AViSSS_Animations/boy1/boy1_idle1.dae; sourceTree = "<group>"; };
-		1F91664B1AC28B7800F51612 /* boy1_idle2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = boy1_idle2.dae; path = ../../../../Dropbox/AViSSS_Animations/boy1/boy1_idle2.dae; sourceTree = "<group>"; };
-		1F91664D1AC2977A00F51612 /* girl1_Model.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = girl1_Model.dae; path = ../../../../Dropbox/AViSSS_Models/girl1_Model.dae; sourceTree = "<group>"; };
-		1F9166511AC299D600F51612 /* CGirl0001.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = CGirl0001.tif; path = ../../../../Dropbox/AViSSS_Models/CGirl0001.tif; sourceTree = "<group>"; };
-		1F9166531AC29BF800F51612 /* girl1_Animations.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = girl1_Animations.dae; path = ../../../../Dropbox/AViSSS_Animations/girl1/girl1_Animations.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,20 +128,12 @@
 		1F4EA5941AC200730030008A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1F29BC8B1ACE09FC00D7F737 /* girl1_Model.dae */,
+				1F29BC911ACE0A1300D7F737 /* boy1_Animations.dae */,
+				1F29BC931ACE0A1D00D7F737 /* girl1_Animations.dae */,
+				1F29BC8D1ACE0A0400D7F737 /* boy1_Model.dae */,
+				1F29BC8F1ACE0A0B00D7F737 /* CGirl0001.tif */,
 				1F4EA5991AC200A00030008A /* CBoy0001.tif */,
-				1F9165EF1AC2289D00F51612 /* boy1_Model.dae */,
-				1F9166531AC29BF800F51612 /* girl1_Animations.dae */,
-				1F9166111AC24DBB00F51612 /* boy1_Animations.dae */,
-				1F9166191AC2575400F51612 /* boy1_idle1.dae */,
-				1F91664D1AC2977A00F51612 /* girl1_Model.dae */,
-				1F9166171AC255A000F51612 /* boy1_Run.dae */,
-				1F9166511AC299D600F51612 /* CGirl0001.tif */,
-				1F9166091AC23DF700F51612 /* boy1_Sit.dae */,
-				1F9166151AC2549B00F51612 /* boy1_idleLoop.dae */,
-				1F91664B1AC28B7800F51612 /* boy1_idle2.dae */,
-				1F91660B1AC23EBA00F51612 /* boy1_Eat.dae */,
-				1F4EA5951AC200730030008A /* boy1_Character.dae */,
-				1F4EA5961AC200730030008A /* boy1_Talk.dae */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -242,22 +218,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F9166521AC299D600F51612 /* CGirl0001.tif in Resources */,
+				1F29BC921ACE0A1300D7F737 /* boy1_Animations.dae in Resources */,
 				1F4EA57C1AC1FE890030008A /* Images.xcassets in Resources */,
-				1F9165F01AC2289D00F51612 /* boy1_Model.dae in Resources */,
-				1F9166181AC255A000F51612 /* boy1_Run.dae in Resources */,
-				1F9166121AC24DBB00F51612 /* boy1_Animations.dae in Resources */,
+				1F29BC8E1ACE0A0400D7F737 /* boy1_Model.dae in Resources */,
 				1F4EA59A1AC200A00030008A /* CBoy0001.tif in Resources */,
-				1F4EA5971AC200730030008A /* boy1_Character.dae in Resources */,
 				1F4EA5751AC1FE890030008A /* art.scnassets in Resources */,
-				1F91660C1AC23EBA00F51612 /* boy1_Eat.dae in Resources */,
-				1F91664E1AC2977A00F51612 /* girl1_Model.dae in Resources */,
-				1F9166161AC2549B00F51612 /* boy1_idleLoop.dae in Resources */,
-				1F91660A1AC23DF700F51612 /* boy1_Sit.dae in Resources */,
-				1F4EA5981AC200730030008A /* boy1_Talk.dae in Resources */,
-				1F91661A1AC2575400F51612 /* boy1_idle1.dae in Resources */,
-				1F91664C1AC28B7800F51612 /* boy1_idle2.dae in Resources */,
-				1F9166541AC29BF800F51612 /* girl1_Animations.dae in Resources */,
+				1F29BC941ACE0A1D00D7F737 /* girl1_Animations.dae in Resources */,
+				1F29BC8C1ACE09FC00D7F737 /* girl1_Model.dae in Resources */,
+				1F29BC901ACE0A0B00D7F737 /* CGirl0001.tif in Resources */,
 				1F4EA57A1AC1FE890030008A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

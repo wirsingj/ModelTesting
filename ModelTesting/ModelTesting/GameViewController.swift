@@ -53,7 +53,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         
        
         setupButtons()
-        respondToSelection(1)
+        respondToSelection(0)
         ///////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
         
