@@ -17,6 +17,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var option1 = UILabel()
     var option2 = UILabel()
+    var curAnimationName: String = ""
+    var curAnimationNameLabel = UILabel()
     let scene = SCNScene()
     
     //var sceneAnimationSourceName = "boy1_idle2"
@@ -32,10 +34,13 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         // create and add a camera to the scene
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
-        
         // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 3)
-        //cameraNode.eulerAngles = SCNVector3Make(-90, 90, 0)
+        cameraNode.position = SCNVector3(x: 0, y: 1, z: 2.5)
+        // cameraNode.eulerAngles = SCNVector3Make(0, -90, 90)
+        
+        //cameraNode.eulerAngles = SCNVector3Make(0, 0, 180)
+
+        // cameraNode.rotation = SCNVector4Make(, <#y: Float#>, <#z: Float#>, <#w: Float#>)
         scene.rootNode.addChildNode(cameraNode)
         // create and add a light to the scene
         let lightNode = SCNNode()
@@ -116,6 +121,19 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         option2.addGestureRecognizer(choiceTouchRecognizer)
         choiceTouchRecognizer.delegate = self
         self.view.addSubview(option2)
+        
+        
+        curAnimationNameLabel.frame = CGRectMake(200, 600, 100, 60)
+        curAnimationNameLabel.backgroundColor = UIColor.blackColor()
+        curAnimationNameLabel.textColor = UIColor.whiteColor()
+        curAnimationNameLabel.numberOfLines = 1
+        curAnimationNameLabel.hidden = false
+        curAnimationNameLabel.preferredMaxLayoutWidth = 60
+        curAnimationNameLabel.text = ""
+        choiceTouchRecognizer.delegate = self
+        self.view.addSubview(curAnimationNameLabel)
+
+        
     }
     func choice0Touched(){
         NSLog("choice 0 Touched!")
@@ -154,7 +172,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
             
         //Get Node containing information about the character mesh
         scnNode = sceneSource?.entryWithIdentifier(objectName, withClass: SCNNode.self) as! SCNNode
-            
+        scnNode.eulerAngles = SCNVector3Make(DegreesToRadians(90), 0, DegreesToRadians(180))
         scene.rootNode.addChildNode(scnNode)
             
         currentAnimationIndex = 0
@@ -168,6 +186,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         let animationNames : [String] = sceneAnimationSource?.identifiersOfEntriesWithClass(CAAnimation.self) as! [String]
         NSLog("animations- \(animationNames)")
         var animation = sceneAnimationSource?.entryWithIdentifier(animationNames[currentAnimationIndex], withClass: CAAnimation.self) as! CAAnimation
+        curAnimationNameLabel.text = animationNames[currentAnimationIndex]
         scnNode.removeAllAnimations()
         scnNode.addAnimation(animation, forKey: "")
         currentAnimationIndex = (currentAnimationIndex + 1) % animationNames.count
@@ -207,6 +226,12 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         }
     }
-
+    func DegreesToRadians (value:Double) -> Float {
+        return Float(value * M_PI / 180.0)
+    }
+    
+    func RadiansToDegrees (value:Double) -> Float {
+        return Float(value * 180.0 / M_PI)
+    }
 
 }
