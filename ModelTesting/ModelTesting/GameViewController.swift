@@ -41,7 +41,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var curAnimationName: String = ""
     var curAnimationNameLabel = UILabel()
-    let scene = SCNScene()
+    var theScene = SCNScene()
     
     //var sceneAnimationSourceName = "boy1_idle2"
     var sceneAnimationSourceName = ""
@@ -53,6 +53,26 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         
         // create a new scene
         
+        
+        
+        
+        // retrieve the SCNView
+        let scnView = self.view as! SCNView
+        
+        
+        //Testing other scenes
+        var testScene = SCNScene(named: "table")
+        
+        
+        
+        // set the scene to the view
+        scnView.scene = theScene
+        //scnView.scene = testScene
+        
+        
+        
+        
+        
         // create and add a camera to the scene
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
@@ -63,24 +83,24 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         //cameraNode.eulerAngles = SCNVector3Make(0, 0, 180)
 
         // cameraNode.rotation = SCNVector4Make(, <#y: Float#>, <#z: Float#>, <#w: Float#>)
-        scene.rootNode.addChildNode(cameraNode)
+        theScene.rootNode.addChildNode(cameraNode)
         // create and add a light to the scene
         let lightNode = SCNNode()
         lightNode.light = SCNLight()
         lightNode.light!.type = SCNLightTypeOmni
         lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
-        scene.rootNode.addChildNode(lightNode)
+        theScene.rootNode.addChildNode(lightNode)
         
         // create and add an ambient light to the scene
         let ambientLightNode = SCNNode()
         ambientLightNode.light = SCNLight()
         ambientLightNode.light!.type = SCNLightTypeAmbient
         ambientLightNode.light!.color = UIColor.darkGrayColor()
-        scene.rootNode.addChildNode(ambientLightNode)
+        theScene.rootNode.addChildNode(ambientLightNode)
         
        
         setupButtons()
-        respondToSelection(5)
+        respondToSelection(1)
         ///////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////
         
@@ -89,14 +109,6 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         
         //setAnimation()
         
-        
-        
-        
-        // retrieve the SCNView
-        let scnView = self.view as! SCNView
-        
-        // set the scene to the view
-        scnView.scene = scene
         
         // allows the user to manipulate the camera
         scnView.allowsCameraControl = true
@@ -116,6 +128,13 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         scnView.gestureRecognizers = gestureRecognizers
     }
+    
+    
+    func setupOverlay(){
+        
+        
+    }
+    
     func setupButtons(){
         boy1Button.frame = CGRectMake(20, 0, 100, 60)
         boy1Button.backgroundColor = UIColor.blackColor()
@@ -272,7 +291,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         choiceTouchRecognizer = UITapGestureRecognizer(target: self, action: Selector("choice\(17)Touched"))
         ch07Button.addGestureRecognizer(choiceTouchRecognizer)
         choiceTouchRecognizer.delegate = self
-        self.view.addSubview(ch07Button)
+        // self.view.addSubview(ch07Button)
 
         ch08Button.frame = CGRectMake(self.view.frame.width - 80, 420, 100, 60)
         ch08Button.backgroundColor = UIColor.blackColor()
@@ -487,6 +506,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         case 1:
              objectName = "CBoy0001"
              sceneName = "boy1_Model"
+             //objectName = "table"
+             // sceneName = "table"
             sceneAnimationSourceName = "boy1_Animations"
             scale = false
         case 2:
@@ -547,56 +568,59 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         case 12:
             objectName = "CH02"
             sceneName = "CH02_Model"
-            sceneAnimationSourceName = "woman17_Animations"
+            sceneAnimationSourceName = "CH02_Animations"
             scale = true
             
         case 13:
             objectName = "CH03"
             sceneName = "CH03_Model"
-            sceneAnimationSourceName = "woman17_Animations"
+            sceneAnimationSourceName = "CH03_Animations"
             scale = true
             
         case 14:
             objectName = "CH04"
             sceneName = "CH04_Model"
-            sceneAnimationSourceName = "woman17_Animations"
+            sceneAnimationSourceName = "CH04_Animations"
             scale = true
             
         case 15:
             objectName = "CH05"
             sceneName = "CH05_Model"
-            sceneAnimationSourceName = "woman17_Animations"
+            sceneAnimationSourceName = "CH05_Animations"
             scale = true
             
         case 16:
             objectName = "CH06"
             sceneName = "CH06_Model"
-            sceneAnimationSourceName = "woman17_Animations"
+            sceneAnimationSourceName = "CH06_Animations"
             scale = true
             
-        case 17:
-            objectName = "CH07"
-            sceneName = "CH07_Model"
-            sceneAnimationSourceName = "woman17_Animations"
-            scale = true
+//        case 17:
+//            objectName = "CH07"
+//            sceneName = "CH07_Model"
+//            sceneAnimationSourceName = "CH07_Animations"
+//            scale = true
             
         case 18:
             objectName = "CH08"
             sceneName = "CH08_Model"
-            sceneAnimationSourceName = "woman17_Animations"
+            sceneAnimationSourceName = "CH08_Animations"
             scale = true
             
         case 19:
             objectName = "CH09"
             sceneName = "CH09_Model"
-            sceneAnimationSourceName = "woman17_Animations"
+            sceneAnimationSourceName = "CH09_Animations"
             scale = true
             
         case 20:
             objectName = "CH10"
             sceneName = "CH10_Model"
-            sceneAnimationSourceName = "woman17_Animations"
+            sceneAnimationSourceName = "CH10_Animations"
             scale = true
+        case 99:
+            objectName = "table"
+            sceneName = "table"
         default :
             return;
         }
@@ -608,19 +632,30 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         //Get Character model scene
         var sceneURL = NSBundle.mainBundle().URLForResource(sceneName, withExtension: "dae")
         var sceneSource = SCNSceneSource(URL: sceneURL!, options: nil)
-            
+        //  var tableScene = sceneSource?.sceneWithOptions(nil, error: nil)
+        ///theScene = tableScene
         //Get Node containing information about the character mesh
         scnNode = sceneSource?.entryWithIdentifier(objectName, withClass: SCNNode.self) as! SCNNode
         scnNode.eulerAngles = SCNVector3Make(DegreesToRadians(90), 0, DegreesToRadians(180))
         if scale{
             scnNode.scale = SCNVector3Make(0.03, 0.03, 0.03)
         }
-        scene.rootNode.addChildNode(scnNode)
-            
+        theScene.rootNode.addChildNode(scnNode)
         currentAnimationIndex = 0
-        //setAnimation()
+        setAnimation()
     }
+    
+    
+    //Testing Morpher Support
+    func setMorpherAnimation(){
+        
+        
+    }
+    
+    
     func setAnimation(){
+        
+        
         //Get Animation
         var sceneAnimationURL = NSBundle.mainBundle().URLForResource(sceneAnimationSourceName, withExtension: "dae")
         var sceneAnimationSource = SCNSceneSource(URL: sceneAnimationURL!, options: nil)
@@ -628,8 +663,23 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         let animationNames : [String] = sceneAnimationSource?.identifiersOfEntriesWithClass(CAAnimation.self) as! [String]
         NSLog("animations- \(animationNames)")
         var animation = sceneAnimationSource?.entryWithIdentifier(animationNames[currentAnimationIndex], withClass: CAAnimation.self) as! CAAnimation
+        
+        //animation.autoreverses = true
         curAnimationNameLabel.text = animationNames[currentAnimationIndex]
         scnNode.removeAllAnimations()
+        
+        
+        //Grouping Experiment
+//        var animation2 = sceneAnimationSource?.entryWithIdentifier("walkCycle", withClass: CAAnimation.self) as! CAAnimation
+//        var animation3 = sceneAnimationSource?.entryWithIdentifier("idle4", withClass: CAAnimation.self) as! CAAnimation
+//        let animationsArray = [animation2, animation3]
+//        let animationGroup = CAAnimationGroup()
+//        animationGroup.repeatCount = 10
+//         animationGroup.animations = animationsArray
+        // scnNode.addAnimation(animationGroup, forKey: "group")
+        
+        
+        //Add Animation
         scnNode.addAnimation(animation, forKey: "")
         currentAnimationIndex = (currentAnimationIndex + 1) % animationNames.count
     }
