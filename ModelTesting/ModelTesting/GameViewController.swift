@@ -61,12 +61,23 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         
         
         //Testing other scenes
-        var testScene = SCNScene(named: "table")
+        // var testScene = SCNScene(named: "bus")
+        
+        
+        //AddLight
+        let light = SCNNode()
+        light.light = SCNLight()
+        light.light?.type = SCNLightTypeAmbient
+        light.light?.color = UIColor(white: 1, alpha: 0.5)
+        //testScene?.rootNode.addChildNode(light)
+        theScene.rootNode.addChildNode(light)
+
         
         
         
+        //testScene?.rootNode.rotation = SCNVector4Make(1, 0, 0, 90)
         // set the scene to the view
-        scnView.scene = theScene
+         scnView.scene = theScene
         //scnView.scene = testScene
         
         
@@ -89,7 +100,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         lightNode.light = SCNLight()
         lightNode.light!.type = SCNLightTypeOmni
         lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
-        theScene.rootNode.addChildNode(lightNode)
+        // theScene.rootNode.addChildNode(lightNode)
         
         // create and add an ambient light to the scene
         let ambientLightNode = SCNNode()
